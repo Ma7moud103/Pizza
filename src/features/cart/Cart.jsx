@@ -20,18 +20,18 @@ function Cart() {
   if (!cart.length) return <EmptyCart />
   return (
     <div className="px-4 py-3">
-      <LinkButton to="/menu">&larr; Back to menu</LinkButton>
+      <LinkButton to="/pizza/menu">&larr; Back to menu</LinkButton>
 
-      <h2 className="mt-7 text-xl font-semibold">Your cart, {userName}</h2>
+      <h2 className="text-xl font-semibold mt-7">Your cart, {userName}</h2>
 
-      <ul className="mt-3 divide-y divide-stone-200 border-b">
+      <ul className="mt-3 border-b divide-y divide-stone-200">
         {cart.map((item) => (
           <CartItem item={item} key={item.id} />
         ))}
       </ul>
 
       <div className="mt-6 space-x-2">
-        <Button to="/order/new" type="primary">
+        <Button to="/pizza/order/new" type="primary">
           Order pizzas
         </Button>
 

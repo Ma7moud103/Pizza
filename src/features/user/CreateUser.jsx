@@ -14,7 +14,7 @@ function CreateUser() {
     e.preventDefault();
     if (!username) return;
     dispatch(updateUserName(username))
-    navigate('/menu')
+    navigate('/pizza/menu')
 
   }
 
@@ -29,7 +29,7 @@ function CreateUser() {
         placeholder="Your full name"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        className="input mb-8 w-72"
+        className="mb-8 input w-72"
       />
 
       {username !== '' && (
